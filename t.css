@@ -1,1 +1,108 @@
+.container{
+  height:300px;
+  width: 600px;
+}
+/* icon and username part */
+.icon img{   
+  transition:.4s ease-out;
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  border: 0px; 
+  object-fit: cover;
+  padding: 0px;
+}
 
+.icon img:hover{
+transform: scale(110%);
+transition: transform .3s;
+  /* down here you can change the color of the pfp shade */
+box-shadow: 0px 0px 60px green;
+height: 120px;
+width: 120px;
+filter: saturate(150%);
+}
+
+
+.name{
+font-family: "Arial Black", Gadget, sans-serif;
+font-size: 24px;
+letter-spacing: 0.9px;
+word-spacing: 0px;
+color: #000000;
+font-weight: 200;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: lowercase;
+  text-transform: scale(110%);
+  text-transition: .4s ease-out;
+  text-align: center;
+  cursor: pointer;
+}
+.name:hover{
+transform: scale(110%);
+  transition: transform .4s;
+  height: 24px;
+  filter: saturate(150%);
+  /* down here you can change the color of the text shade and the position of it */
+  text-shadow: 2px 2px 0px green, 2px 2px 0 green, 2px 3px 0 green, 0px 0px 0 green;
+}
+
+/* bio part */
+
+
+.bio {
+  font-family: "Arial",  Helvetica, sans-serif;
+  font-size: 13px;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  color: black;
+  font-weight: 600;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-align: center;
+}
+
+
+.highlights img{
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: 3px solid #d3d6db; 
+  object-fit: cover;
+  padding: 0px;
+  img-spacing: 0px;
+}
+
+.loc-caption:after {
+  content: attr(title);
+  display: block;
+}
+
+ul {
+  text-align: center;
+  padding: 0;
+}
+
+li {
+  width: 10%;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 100px;
+}
+
+li img {
+  max-width: 100%;
+  height: auto;
+}
+
+.tags{
+  height: 90px;
+  text-align: center;
+  word-spacing: 100px;
+  padding-top: 25px;
+  }
