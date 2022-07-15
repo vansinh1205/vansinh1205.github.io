@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+                    * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            section {
+                display: flex;
+                justify-content: center;
+                height: 100%;
+            }
+            .container {
+                display: flex;
+                width: 60rem;
+                height: 30rem;
+                margin: auto;
+                background: red;    
+            }
+            .input-data {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 2em;
+            }
+            input[type="submit"],
+            input[type="reset"] {
+                width: 5rem;
+                padding: .6em 0;
+            }
+            form > *,
+            content > * {
+                padding-bottom: 1em;
+            }
+            .button {
+                padding: 0;
+            }
+            .output-data {
+                display: flex;
+                align-items: center;
+                width: 70%;
+                background: rgb(242, 247, 244);
+            }
+            .content > * {
+               display: flex;
+                width: 60rem;
+               height: 30rem;
+               margin:auto;
+              backgroud: rgb(217, 255, 0);
+            }
+            @media (max-width: 60rem) {
+                .container {
+                    flex-direction: column;
+                }
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 15rem;
+                }
+            }
+        form{
+            align-content: center;
+            font-size: large;
+        }
+    </style>
+<body>
+    <section>
+     <div class="contauner">
+        <div class="input-data">
+        </div>
+     </div>
+<form>
+ Toán:
+ <input type="text" name="number" id="toan">
+ <br><br><br>
+ Văn:
+ <input type="text" name="number" id="van"><br><br>
+
+  <br>
+ Hạnh Kiểm :&nbsp&nbsp&nbsp <input type="radio" name="grade" value="Đạt">Đạt&nbsp&nbsp&nbsp
+ <input type="radio" name="grade" value="Không Đạt">Không Đạt&nbsp&nbsp
+ 
+ <div class="button">
+    <input type="button" value="Kiểm Tra" id="submit" onclick="myFunction()">
+    <input type="reset" value="Hủy" id="reset">
+</div>
+</form>
+<div class="output-data">
+    <div class="content"></div>
+    </div>
+</div>
+</section>
+</body>
+<body>
+
+<script type="text/javascript">
+    function myFunction() {
+        var toan = document.getElementById('toan').value;
+        var van = document.getElementById('van').value;
+        var grades = document.getElementsByName('grade');
+        grades.forEach(grade => {
+            if (grade.checked === true) {
+                var result = (parseInt(toan) + parseInt(van)) / 2;
+                if(grade.value == "Đạt" && result >= 5){
+                    document.querySelector('.content').textContent = 'Lên Lớp';
+                } else {
+                    document.querySelector('.content').textContent = 'Ở Lại Lớp';
+                }
+            }
+        })
+    }
+</script>
+</body>
+</html>
